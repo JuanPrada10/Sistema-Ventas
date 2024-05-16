@@ -29,7 +29,7 @@ public class ClienteDAO {
                 c.setEstado(rs.getString(5));
             }
         }catch (Exception e) {
-            
+            System.out.println("buscar"+e.getMessage());
         }
         return c;
     }
@@ -54,7 +54,7 @@ public class ClienteDAO {
             }
             System.out.println("Consulta de manera exitosa para cliente");
         } catch (Exception e) {
-
+            System.out.println("listar"+e.getMessage());
         }
         return lista;
     }
@@ -72,7 +72,7 @@ public class ClienteDAO {
             ps.executeUpdate();
             System.out.println("Insertó de manera exitosa para cliente");
         } catch (Exception e) {
-
+            System.out.println("agregar"+e.getMessage());
         }
         //return r;
     }
@@ -92,7 +92,7 @@ public class ClienteDAO {
             }
             System.out.println("Lista el cliente id de manera exitosa");
         } catch (Exception e) {
-
+            System.out.println("listarId"+e.getMessage());
         }
         return cl;
 
@@ -112,7 +112,7 @@ public class ClienteDAO {
             ps.executeUpdate();
             System.out.println("Actualiza de manera exitosa el cliente");
         } catch (Exception e) {
-
+            System.out.println("actualizar"+e.getMessage());
         }
         //return r;
     }
@@ -125,7 +125,7 @@ public class ClienteDAO {
             ps.executeUpdate();
             System.out.println("Elimina de manera exitosa el cliente");
         } catch (Exception e) {
-
+            System.out.println("delete"+e.getMessage());
         }
     }
 }

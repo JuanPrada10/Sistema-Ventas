@@ -31,7 +31,7 @@ public class EmpleadoDAO {
             }
         }
         catch (Exception e) {
-            
+            System.out.println("validar"+e.getMessage());
         }
         return em;
     }
@@ -57,7 +57,7 @@ public class EmpleadoDAO {
             }
             System.out.println("Consulta de manera exitosa");
         } catch(Exception e) {
-            
+            System.out.println("listar"+e.getMessage());
         }
         return lista;
     }
@@ -75,7 +75,7 @@ public class EmpleadoDAO {
             ps.executeUpdate();
             System.out.println("Insertó de manera exitosa");
         } catch(Exception e) {
-            
+            System.out.println("agregar"+e.getMessage());
         }
         //return r;
     }
@@ -96,7 +96,7 @@ public class EmpleadoDAO {
             }
             System.out.println("Lista el empleado id manera exitosa");
         } catch(Exception e) {
-            
+            System.out.println("listarId"+e.getMessage());
         }
         return emp;
         
@@ -117,7 +117,7 @@ public class EmpleadoDAO {
             ps.executeUpdate();
             System.out.println("Actualiza de manera exitosa");
         } catch(Exception e) {
-            
+            System.out.println("actualizar"+e.getMessage());
         }
         //return r;
     }
@@ -130,7 +130,7 @@ public class EmpleadoDAO {
             System.out.println("Elimina de manera exitosa");
         }
         catch (Exception e) {
-            
+            System.out.println("delete"+e.getMessage());
         }
     }
 }

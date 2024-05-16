@@ -36,7 +36,7 @@ public class ProductoDAO {
             }
             System.out.println("Consulta de manera exitosa para producto");
         } catch (Exception e) {
-
+            System.out.println("listar"+e.getMessage());
         }
         return lista;
     }
@@ -54,7 +54,7 @@ public class ProductoDAO {
             ps.executeUpdate();
             System.out.println("Insertó de manera exitosa para producto");
         } catch (Exception e) {
-
+            System.out.println("agregar"+e.getMessage());
         }
         //return r;
     }
@@ -75,7 +75,7 @@ public class ProductoDAO {
             }
             System.out.println("Lista el producto id de manera exitosa");
         } catch (Exception e) {
-
+            System.out.println("listarId"+e.getMessage());
         }
         return pr;
 
@@ -95,7 +95,7 @@ public class ProductoDAO {
             ps.executeUpdate();
             System.out.println("Actualiza de manera exitosa el producto");
         } catch (Exception e) {
-
+            System.out.println("actualizar"+e.getMessage());
         }
         //return r;
     }
@@ -108,7 +108,7 @@ public class ProductoDAO {
             ps.executeUpdate();
             System.out.println("Elimina de manera exitosa el producto");
         } catch (Exception e) {
-
+            System.out.println("delete"+e.getMessage());
         }
     }    
     
@@ -121,7 +121,7 @@ public class ProductoDAO {
             ps.setInt(2, id);
             ps.executeUpdate();
         } catch (Exception e) {
-
+            System.out.println("actualizarstock"+e.getMessage());
         }
     }
 }

@@ -42,7 +42,7 @@
                     </button>
                     <div class="dropdown-menu text-center">
                         <a class="dropdown-item" href="#">
-                            <img src="img/user.png" alt="" height="60" width="60"/>
+                            <img src="img/client.png" alt="" height="60" width="60"/>
                         </a>
                         <a class="dropdown-item" href="#">${usuario.getUser()}</a>
                         <div class="dropdown-divider" href="#"></div>

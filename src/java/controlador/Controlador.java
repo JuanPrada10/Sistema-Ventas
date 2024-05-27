@@ -1,5 +1,16 @@
-package Controlador;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
+package controlador;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import Modelo.Cliente;
 import Modelo.ClienteDAO;
 import Modelo.ClienteDTO;
@@ -15,16 +26,16 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ *
+ * @author juanp
+ */
+@WebServlet(name = "Controlador", urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet {
-
-    int ide;
+int ide;
     EmpleadoDTO edto = new EmpleadoDTO();
     Cliente cl = new Cliente();
     ClienteDAO cdao = new ClienteDAO();
@@ -45,7 +56,6 @@ public class Controlador extends HttpServlet {
     //numserie
     String numeroserie;
     VentaDAO vdao = new VentaDAO();
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -57,7 +67,7 @@ public class Controlador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String menu = request.getParameter("menu");
+           String menu = request.getParameter("menu");
         String accion = request.getParameter("accion");
 
         
